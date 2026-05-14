@@ -1,7 +1,8 @@
 {
-  "name": "pitch-deck-pro",
+  "name": "pitch-deck-pro-elite",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A strategic, executive-grade pitch deck suite powered by Claude and the Model Context Protocol (MCP).",
   "type": "module",
   "scripts": {
     "dev": "vite",
