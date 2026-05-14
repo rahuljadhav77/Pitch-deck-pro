@@ -1,0 +1,68 @@
+{
+  "hash": "5c08047f",
+  "configHash": "cc3b049e",
+  "lockfileHash": "b0a2242f",
+  "browserHash": "e3e6e937",
+  "optimized": {
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "9cbbe581",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "file": "lucide-react.js",
+      "fileHash": "baf0b899",
+      "needsInterop": false
+    },
+    "pptxgenjs": {
+      "src": "../../node_modules/pptxgenjs/dist/pptxgen.es.js",
+      "file": "pptxgenjs.js",
+      "fileHash": "c1074acc",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "02d207a4",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "95db006d",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "d801a7c7",
+      "needsInterop": true
+    },
+    "recharts": {
+      "src": "../../node_modules/recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "8cb7df84",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "browser-external_node_fs-d-4qKGoa": {
+      "file": "browser-external_node_fs-d-4qKGoa.js",
+      "isDynamicEntry": true
+    },
+    "browser-external_node_https-DQlPsVmG": {
+      "file": "browser-external_node_https-DQlPsVmG.js",
+      "isDynamicEntry": true
+    },
+    "chunk-C-Qwzh9l": {
+      "file": "chunk-C-Qwzh9l.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-D-t4hsyA": {
+      "file": "react-dom-D-t4hsyA.js",
+      "isDynamicEntry": false
+    }
+  }
+}
