@@ -1,0 +1,27 @@
+[
+  {
+    "id": "eco-1",
+    "type": "hero",
+    "title": "Eco-Flow",
+    "subtitle": "Smart Water for a Greener Planet",
+    "content": "Revolutionizing urban water management with AI-powered conservation technology."
+  },
+  {
+    "id": "eco-2",
+    "type": "grid",
+    "title": "The Technology",
+    "features": [
+      { "title": "Real-time Analytics", "desc": "Monitor water flow down to the milliliter across entire cities." },
+      { "title": "Predictive Maintenance", "desc": "Detect leaks before they happen using neural acoustic sensors." },
+      { "title": "Smart Shut-off", "desc": "Automatic emergency mitigation to prevent catastrophic water damage." },
+      { "title": "Cloud Dashboard", "desc": "Comprehensive management suite for municipal and commercial use." }
+    ]
+  },
+  {
+    "id": "eco-3",
+    "type": "hero",
+    "title": "Join the Flow",
+    "subtitle": "Currently Raising $5M Seed Round",
+    "content": "Let's build a sustainable future, one drop at a time."
+  }
+]
