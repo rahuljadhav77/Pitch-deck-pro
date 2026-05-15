@@ -1,30 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import pptxgen from 'pptxgenjs'
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  Settings, 
+import {
+  ChevronLeft,
+  ChevronRight,
+  Settings,
   Sparkles,
   Rocket,
   Download,
   FileText,
   Check,
-  Target,
-  PieChart as PieIcon,
   Activity,
-  Trophy,
   Zap,
-  TrendingUp,
-  Users,
   Map,
   Shield,
-  CircleDollarSign,
   Monitor
 } from 'lucide-react'
-import { 
+import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  LineChart, Line, PieChart, Pie, Cell, AreaChart, Area
+  AreaChart, Area
 } from 'recharts'
 import './App.css'
 
@@ -241,7 +235,7 @@ function App() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as any } }
   };
 
   const renderSlideContent = (s: Slide) => {
@@ -276,7 +270,7 @@ function App() {
             <motion.div className="feature-grid" variants={containerVariants} initial="hidden" animate="visible" style={{ width: '100%' }}>
               {s.askData?.usage.map((u, i) => (
                 <motion.div key={i} className="feature-card" variants={itemVariants} style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '3rem', fontWeight: 800, color: 'var(--primary-color)' }}>{u.value}%</div>
+                  <div style={{ fontSize: '3rem', fontWeight: 800, color: 'var(--accent-primary)' }}>{u.value}%</div>
                   <div style={{ fontWeight: 700, fontSize: '1.2rem', marginTop: '0.5rem' }}>{u.label}</div>
                 </motion.div>
               ))}
@@ -291,15 +285,15 @@ function App() {
                 <AreaChart data={s.chartData}>
                   <defs>
                     <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="var(--primary-color)" stopOpacity={0.3}/>
-                      <stop offset="95%" stopColor="var(--primary-color)" stopOpacity={0}/>
+                      <stop offset="5%" stopColor="var(--accent-primary)" stopOpacity={0.3}/>
+                      <stop offset="95%" stopColor="var(--accent-primary)" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
                   <XAxis dataKey="name" stroke="#64748b" axisLine={false} tickLine={false} />
                   <YAxis stroke="#64748b" axisLine={false} tickLine={false} />
                   <Tooltip contentStyle={{ background: '#020617', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }} />
-                  <Area type="monotone" dataKey="value" stroke="var(--primary-color)" strokeWidth={4} fillOpacity={1} fill="url(#colorValue)" />
+                  <Area type="monotone" dataKey="value" stroke="var(--accent-primary)" strokeWidth={4} fillOpacity={1} fill="url(#colorValue)" />
                 </AreaChart>
               ) : (
                 <BarChart data={s.chartData}>
@@ -307,7 +301,7 @@ function App() {
                   <XAxis dataKey="name" stroke="#64748b" axisLine={false} tickLine={false} />
                   <YAxis stroke="#64748b" axisLine={false} tickLine={false} />
                   <Tooltip contentStyle={{ background: '#020617', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }} />
-                  <Bar dataKey="value" fill="var(--primary-color)" radius={[8, 8, 0, 0]} />
+                  <Bar dataKey="value" fill="var(--accent-primary)" radius={[8, 8, 0, 0]} />
                 </BarChart>
               )}
             </ResponsiveContainer>
@@ -318,7 +312,7 @@ function App() {
           <motion.div className="feature-grid" variants={containerVariants} initial="hidden" animate="visible">
             {s.features?.map((f, i) => (
               <motion.div key={i} className="feature-card" variants={itemVariants}>
-                <div style={{ color: 'var(--primary-color)', marginBottom: '1rem' }}>
+                <div style={{ color: 'var(--accent-primary)', marginBottom: '1rem' }}>
                   {f.icon === 'Zap' && <Zap size={32} />}
                   {f.icon === 'Monitor' && <Monitor size={32} />}
                   {f.icon === 'Activity' && <Activity size={32} />}
@@ -337,14 +331,14 @@ function App() {
             {s.roadmapData?.map((r, i) => (
               <motion.div key={i} className="feature-card" variants={itemVariants}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                  <span style={{ color: 'var(--primary-color)', fontWeight: 800 }}>{r.date}</span>
+                  <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>{r.date}</span>
                   <Map size={20} color="var(--text-muted)" />
                 </div>
                 <h3>{r.phase}</h3>
                 <ul style={{ listStyle: 'none', marginTop: '1rem' }}>
                   {r.goals.map((g, j) => (
-                    <li key={j} style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <Check size={14} color="var(--primary-color)" /> {g}
+                    <li key={j} style={{ color: 'var(--text-body)', marginBottom: '0.5rem', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <Check size={14} color="var(--accent-primary)" /> {g}
                     </li>
                   ))}
                 </ul>
